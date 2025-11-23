@@ -1,0 +1,30 @@
+Tutorial 2: Why deep learning is becoming so popular? | Deep Learning Tutorial 2 (Tensorflow2.0, Keras & Python)
+-----------------------------------------------------------------------------------------------------------------
+Deep learning is popular and started using because of below 4 reasons
+
+1. Data growth : 
+In most of the recent years, there are more data growth (for each company or in social media or in any other). So companies wanted to use that data for further growth by processing something
+
+2. Hardware advancement:
+Olden days we have limitation in hardware to run deep learning or with huge data. Our computer don't support or takes hours of time for execution of any thing related to deep learning.
+Now there are GPU's and TPU's available which we can use for deep learning or processing huge data.
+
+3. Python and Open source ecosystem:
+Previously the deep learning is done on few places. That too in C++.
+Now we have python which will be easy that C++ and Java.
+Also deep learning libraries become free and open source now.
+Tensorflow is one of deep learning framework made by google. It is now open source
+Pytorch is also one of the deep learning framework made by facebook. It is also now open source.
+So now using any of these framework, things becomes easy for deep learning
+
+4. Cloud and AI boom
+Now there is cloud, which also support to run the deep learnings on the cloud machine.
+Also few tech companies also annonced that many of their techs are replaced with AI.
+So the AI also boom and many companies started with the AI.
+
+
+All these 4 reason made the deep learning so popular.
+
+-----------------------------------------------------
+
+---------------------------------------------------------------------------------------
