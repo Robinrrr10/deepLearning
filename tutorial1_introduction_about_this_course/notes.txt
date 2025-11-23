@@ -1,0 +1,9 @@
+Tutorial 1: Introduction | Deep Learning Tutorial 1 (Tensorflow Tutorial, Keras & Python)
+------------------------------------------------------------------------------------------
+This is intro of the video.
+In this whole course we will learning about deep learning.
+Its for beginner.
+The pre-request for the course is, you should know the python, basics of pandas and machine learning
+Here we will use tensor flow, keras and python.
+  
+--------------------------------------------------------------------
