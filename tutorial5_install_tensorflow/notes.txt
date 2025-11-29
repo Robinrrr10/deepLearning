@@ -1,0 +1,23 @@
+Tutorial 5 : Install tensorflow 2.0 | Deep Learning Tutorial 5 (Tensorflow Tutorial, Keras & Python)
+----------------------------------------------------------------------------------------------------
+In this tutorial we can see how we can install tensorflow
+
+Make sure you have only one version of python installed on our machine
+If you are install anconda, it will install python first and then it will install anconda.
+If there is already a python, then there might be 2 version of python.
+This can create a problem.
+So better make sure only one python version is installed on your machine
+We can go into control panel -> program and features
+There we can search for python.
+
+Open terminal or command prompt.
+Below is the command to install tensorflow
+pip install tensorflow
+
+//This should install tensor flow.
+
+Now if you give below line on jupyter notebook or in python file, we should not get the error
+import tensoflow
+
+
+------------------------------------------
