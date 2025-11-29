@@ -97,6 +97,7 @@ sigmoid(-200) = 1/1+2.71^200           => Almost close to 0
 sigmoid will give the result in the range of 0 to 1.
 If it is close to 0, we need to go with 0
 If it is close to 1, we need to go with 1
+Here 0.5 splits whether it is close to 0 or close to 1
 
 Here we have 2 steps.
 In first step, we are still drawing with linear equaltion
@@ -107,6 +108,30 @@ z = 1/1+e^-y        //z is is person will buy insurance
 
 In first step we are using linear logistics classification and drawing straight line and finding y.
 In second step, we are using the y on sigmoid formula and finding the z whether the person will buy insurance or not
+
+
+Lets say from the linear logistics regression we are getting below. We can get value via model.coef_ and model.intercept_
+
+y = 0.042 * x + 1.53   //x is age,   0.042 is the m (model.coef_) and 1.53 is the b (model.intercept_) //This same we get from ml tutorial 8 of the video
+
+Here when x age is passed, it will give y and that y will be given on below sigmoid formula
+
+z = 1/1+e^-y               //e is 2.71 constant. y we get from above
+
+And we will get z
+
+as per example if age 35 is passed we will get 0.48 which is less than 0.5, so near to 0. So person wont buy insurance
+
+as per example if age 43 is passed we will get 0.57 which is more than 0.5, so near to 1. So person will buy insurance
+
+In this case step 1 and step 2 are involed for logistics regression. This is neuron
+So here first it will use linear mode(linear logistics regression) and then the value is passed to activate function (sigmoid) this is neuron
+
+
+
+
+
+
 
 
 
