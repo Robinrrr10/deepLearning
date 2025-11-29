@@ -1,0 +1,46 @@
+Tutorial 4 : Neural Network Simply Explained | Deep Learning Tutorial 4 (Tensorflow2.0, Keras & Python)
+------------------------------------------------------------------------------------------------------
+Lets talk this with the example to understand neural network
+Let say we wanted to build the approach to predict whether the image is koala or not. (Koala is the animal in australia)
+
+To make this happen, we can give split task for each person
+Person 1 can take care of eyes
+Person 2 can take care of nose
+Person 3 can take care of Ears
+
+Person 4 can take care of front legs
+Person 5 can take care of back legs
+
+Each persons are assigned with their given parts and we are giving more photos to train on that specific parts.
+Once we give the photo to predict, each one will comes up with the score
+There is as score of 0 to 1
+Which has 0, 0.5 and 1
+0 means no, 0.5 not sure. may be. 1 means yes
+
+Person 1, person 2 and person 3 will report the score to Person A (Person A takes care of Face) - There is weightage given for each parts as per importance: Eg: Face = eye * 0.2 + nose * 0.5 + ears * 0.3
+
+Person 4 and person 5 will report the score to Person B (Person B takes care of body) - There is weightage given for this as well: Eg: Body = front leg * 0.5 + back leg * 0.5
+
+Person A and Person B reports to Person C (Person C takes care of final result). There is a weightage here as well Eg: Full koala = face * 0.6 + body * 0.4
+
+Now Person C will give the final score to predict whether it is Koala or not.
+
+This is simple example of neural network.
+
+Here in Neural network it has 3 layers
+1. Input layer (Here Person 1, Person 2, Peson 3, Person 4 and Person 5 are input layers)
+2. Hidden layer (Person A and Person B are hidden layers)
+3. Output layer (Person C is the output layer)
+
+
+During training, there are changes it might miss predict. During that time, the answer will be given back to correct by themself.
+That is Backward error propagation
+
+
+In neural network there is one set of input layers, there can be multiple set of hidden layers and there is only one output layer
+
+This is neural network
+
+Refer image for some more details
+
+--------------------------------------------
