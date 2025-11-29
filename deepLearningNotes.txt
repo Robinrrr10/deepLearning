@@ -289,6 +289,44 @@ When an data of one image is passed to this neural network, the predicted value 
 Eg: when data of image 4 is passed, the 4th neuron of output layer will give highest score.
 
 
+We can use below which can help many a times
+
+import tensorflow as tf
+from tensorflow import keras
+import matplotlib.pyplot as plt
+import pandas as plt
+%matplotlib inline
+import numpy as np
+
+To load digits use below 
+
+(X_train, y_train), (X_test, y_test) = keras.datasets.mnist.load_data()
+This will give train and test data set like below
+
+We can check the length like below
+len(X_train)
+
+len(X_test)
+
+To see number of features in 2D array
+X_train[0].shape
+
+To viwe the data of one of data
+X_train[0]
+
+To view the image. Use matplot matshow which show the image as per values in the dataset
+plt.matshow(X_train[0])
+
+
+---------------------------------------------
+
+
+
+
+
+
+
+
 -------------------------------------------------------------
 
 
