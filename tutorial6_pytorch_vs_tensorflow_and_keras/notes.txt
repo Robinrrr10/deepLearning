@@ -1,0 +1,18 @@
+
+Tutorial 6: Pytorch vs Tensorflow vs Keras | Deep Learning Tutorial 6 (Tensorflow Tutorial, Keras & Python)
+--------------------------------------------------------------------------------------------------------
+Tensorflow is one of the deep learning framework created by google
+Pytorch is other deep learning framework created by facebook
+There is one more deep learning frameworkf called CNTK which was created by microsoft. That is not much popular or used like above two.
+
+Keras is not the full fledged deep learning framework.
+This is wrapper which internally calls deep learning frameworks like tensorflow, CNTK and Theano
+
+The reason why keras comes is, using tensorflow directly was little code complex.
+keras made that simple to use. 
+
+Previously keras will be installed using pip install keras. And the tensorflow will be imported via backend.
+Now in tensorflow 2.0 they have included the keras, so we can directly use by calling from tensor import keras. 
+
+
+----------------------------------------------------------
