@@ -1,11 +1,110 @@
 Tutorial 3: What is a neuron? | Deep Learning Tutorial 3 (Tensorflow Tutorial, Keras & Python)
 ----------------------------------------------------------------------------------------------
+Neuron is the technique where we will use two different way(steps) sequenctly to predict the right value. 
+First function result will be passed to next function/equation to have the right result
+Second function/equation is called activation function
+Eg:
+First way is the linear logistic classification, then the result and the value will be passed to sigmoid function(equation). 
+So the prediction will be accurate
+
+Eg:
+First function (Eg: Linear) ----> Second function(Sigmoid) => Result
+
+Simoid is the equation which gives any one of the two result. 0 or 1.
+If result is greater than 0.5, it will be 1
+If result is less than 0.5, it will be 0
+
+Lets take an example of insurance data which has two columns 1. age and 2. hasInsurance
+Here if we plot that in scatter plot chat with age on x axis and has insurance on y axis.
+This will show that nearly before 42 they dont have insurace, post 42 they have the insurance
+We can use linear logistic regression to draw a line which split whether person has insurace or not.
+Regarding linear logistic regression, we can refer our machine learning tutorial 8 and 9 (https://github.com/Robinrrr10/machineLearning/tree/main/tutorial8_logistic_regression_or_classification, https://github.com/Robinrrr10/machineLearning/tree/main/tutorial8_part_2_logistic_regression_and_multiclass_classification_with_example_of_number_image_prediction)
+By using that line we can differentiate.
+But lets say the data point has few data where more aged person has the insurance.
+In that case, the line might go little bad and move towards 45 age as the split and the it might miss to predict the correct one.
+When missed, even for age 43, 44 it will predict they don't have insurance which is wrong.
+This is the problem with linear regression (straight line).
+Then to solve this, with that value, we are drawing the curved line kind of the S
+Which split these two in better way.
+That curved approach is called sigmoid o logit function. 
+There is a equation for this.
+This uses the result of previous linear result into this the sigmoid to make that better.
+
+Below is the formula for sigmoid
+
+Formula
+z = sigmoid(y)
+sigmoid(y) = 1/1+e^-y                     //Here e is Euler's number ~ 2.71828
+z =  1/1+e^-y
+
+Example:
+sigmoid(200) = 1/1+2.71^-200           => Almost close to 1
+
+sigmoid(-200) = 1/1+2.71^200           => Almost close to 0
+
+sigmoid will give the result in the range of 0 to 1.
+If it is close to 0, we need to go with 0
+If it is close to 1, we need to go with 1
+Here 0.5 splits whether it is close to 0 or close to 1
+
+Here we have 2 steps.
+In first step, we are still drawing with linear equaltion
+y = mx + b         //x is age
+
+In second step, we are using y which we got from previous step in sigmoid equation below
+z = 1/1+e^-y        //z is is person will buy insurance
+
+In first step we are using linear logistics classification and drawing straight line and finding y.
+In second step, we are using the y on sigmoid formula and finding the z whether the person will buy insurance or not
+
+
+Lets say from the linear logistics regression we are getting below. We can get value via model.coef_ and model.intercept_
+
+y = 0.042 * x + 1.53   //x is age,   0.042 is the m (model.coef_) and 1.53 is the b (model.intercept_) //This same we get from ml tutorial 8 of the video
+
+Here when x age is passed, it will give y and that y will be given on below sigmoid formula
+
+z = 1/1+e^-y               //e is 2.71 constant. y we get from above
+
+And we will get z
+
+as per example if age 35 is passed we will get 0.48 which is less than 0.5, so near to 0. So person wont buy insurance
+
+as per example if age 43 is passed we will get 0.57 which is more than 0.5, so near to 1. So person will buy insurance
+
+In this case step 1 and step 2 are involed for logistics regression. This is neuron
+So here first it will use linear mode(linear logistics regression) and then the value is passed to activate function (sigmoid) this is neuron
 
 
 
+In above example, we have taken only one feature which is the age, for this above is the equation
+y = 0.042 * x + 1.53   //x is age,
+
+There can be multiple features for the prediction, in that case, we need to use below formula
+
+y = 0.042 * X1 +  0.008 * X2 +  0.2 * X3 + 1.53  //where X1 is age, X2 is income, X3 is education
+
+y = W1 * X1 +  W2 * X2 +  W3 * X3 + b   //Equation
+
+y = nEn=1 W^iX^i + b  //Please refer image for correct equation. We cannot able to write in notes. That is the final equation
 
 
 
+So here, with age there can w1 value, with income there can be w2 value and with education there can be w3 value.
+With that equation we will get the y.
+That y is passed on the sigmoid function to get the result. This is the neuron when there are more features.
+
+In first step, with all feature it will find the y
+And then in second step, with y it will find the z on below fomula
+z = 1/1+e^-y
+z will be between 0 and 1.
+This is neuron
+
+Please refer images of this tutorial
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------
 
 
 
