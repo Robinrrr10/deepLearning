@@ -250,6 +250,55 @@ Now in tensorflow 2.0 they have included the keras, so we can directly use by ca
 ----------------------------------------------------------
 
 
+Tutorial 7: Neural Network For Handwritten Digits Classification | Deep Learning Tutorial 7 (Tensorflow2.0)
+----------------------------------------------------------------------------------------------------------
+
+This has little bit of things which covered on tutorial 3 neutron with age factor to determine whether person will buy insurance or not including other featire
+Here there can be features like age, education, salary and saving factor.
+Here we can pass the age and education to hidden factor awareness
+And we can pass salary and saving factor to hidden factor affordable
+Now awareness and afforable can pass to output final layer to determine whether person will buy insurance or not
+In real time all features will be passed to all hidden layer
+Please refer the images
+
+Now lets take the handwritten digits
+This we can try to solve with simple neuron which has input layer and output layer.
+Later we can add hidden layer to increase the accuracy
+As the digit can be one of the digits. 
+There are only 10 numbres. So in output layer, we can give 10 neauron.
+When image is passed to the input layer and then 10 neurons in the output layer, the matching digit will give the highest score.
+Mostly for classification, we can give number of neuron in output layer as per number of different outputs.
+Here there is only 10 digit. So we have given 10
+
+We cannot directly give the image file into the input layer.
+It accepts only the data.
+So the image needs to converted into input data
+
+Here in each image, the background is black and number is drawn in white.
+So for black the value can be 0 and for complete white it can be 255.
+The image will be splitted into multiple 2D array of boxes or matrix 7 X 7 or might be anything X anything.
+Based on whites available on each box, there can be value.
+Now we have 2D array (7 X 7) of values.
+Now that 2D array of values needs to converted in 1D array with 49 features/columns (7 X 7)
+Now these 49 features will be used as the input layer.
+
+In the given digits data set, it has 28 X 28 of 2D values for each image data.
+So when converting into single diamension array, it will have 784 features/columns.
+We the input layer will have 784 features. And the output layer will have only 10 as the digits are only 10. We can use sigmoid
+When an data of one image is passed to this neural network, the predicted value will be shown on one of 10 output layer. That accuracy score will be higher
+Eg: when data of image 4 is passed, the 4th neuron of output layer will give highest score.
+
+
+-------------------------------------------------------------
+
+
+
+
+
+
+
+
+
 
 
 
