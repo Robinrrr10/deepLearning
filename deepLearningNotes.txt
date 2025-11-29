@@ -52,7 +52,21 @@ All these 4 reason made the deep learning so popular.
 
 Tutorial 3: What is a neuron? | Deep Learning Tutorial 3 (Tensorflow Tutorial, Keras & Python)
 ----------------------------------------------------------------------------------------------
+Neuron is the technique where we will use two different way sequenctly to predict the right value
+First function result will be passed to next function/equation to have the right result
+Second function/equation is called activation function
 
+Eg:
+First way is the linear logistic classification, then the result and the value will be passed to sigmoid function(equation). 
+So the prediction will be accurate
+
+
+First function (Eg: Linear) ----> Second function(Sigmoid) => Result
+
+
+Simoid is the equation to which gives any one of the two result. 0 or 1.
+If result is greater than 0.5, it will be 1
+If result is less than 0.5, it will be 0
 
 
 
