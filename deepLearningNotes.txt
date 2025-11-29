@@ -129,9 +129,34 @@ So here first it will use linear mode(linear logistics regression) and then the 
 
 
 
+In above example, we have taken only one feature which is the age, for this above is the equation
+y = 0.042 * x + 1.53   //x is age,
+
+There can be multiple features for the prediction, in that case, we need to use below formula
+
+y = 0.042 * X1 +  0.008 * X2 +  0.2 * X3 + 1.53  //where X1 is age, X2 is income, X3 is education
+
+y = W1 * X1 +  W2 * X2 +  W3 * X3 + b   //Equation
+
+y = nEn=1 W^iX^i + b  //Please refer image for correct equation. We cannot able to write in notes. That is the final equation
 
 
 
+So here, with age there can w1 value, with income there can be w2 value and with education there can be w3 value.
+With that equation we will get the y.
+That y is passed on the sigmoid function to get the result. This is the neuron when there are more features.
+
+In first step, with all feature it will find the y
+And then in second step, with y it will find the z on below fomula
+z = 1/1+e^-y
+z will be between 0 and 1.
+This is neuron
+
+Please refer images of this tutorial
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------
 
 
 
