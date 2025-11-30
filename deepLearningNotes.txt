@@ -375,10 +375,39 @@ This is for training the model with training data set of X and y
 Here epochs is the numner of times the model needs to iterate the training samples. Each subset will be divide into training data set as per given epochs number of iteration and train
 When training it will give training score. Each epoc training score of training data set which we can see on output when runs
 
-
 model.evaluate(X_test_flatten_scalled, y_test)
 # This is to evaluate score with the test data set.
 # For training it uses training data set and shows score in fit. But in evalute this is with test data set and shows the real score which will be used for actual evaluation
+
+
+
+We can add the hiddle layer like below when we create the model 
+model2 = keras.Sequential([
+    keras.layers.Dense(100, input_shape=((784,)), activation='relu'),
+    keras.layers.Dense(10, activation='sigmoid')
+]
+)
+Here we have added one hidden layer with 100 neurons to see how it performs. 
+Also we have given activation as relu. We will see what is relu in later tutorial. Here in this case, it improved the performance.
+Input needs to passed only on first layer
+
+
+We can avoid flattening manually by callig keras.layers.Flatten to make it one diamension array
+model3 = keras.Sequential([
+    keras.layers.Flatten(input_shape=(28,28)),
+    keras.layers.Dense(100, activation='relu'),
+    keras.layers.Dense(10, activation='sigmoid')
+]
+)
+## To flatten we can use  keras.layers.Flatten. This will take care of making to one diamenstion.
+## Scalling still we need to take care
+
+
+Please go through jupyter notebook for more details
+
+
+---------------------------------------------------------------------------
+
 
 
 
