@@ -160,6 +160,8 @@ Please refer images of this tutorial
 
 Tutorial 4 : Neural Network Simply Explained | Deep Learning Tutorial 4 (Tensorflow2.0, Keras & Python)
 ------------------------------------------------------------------------------------------------------
+Neural network is the combination of multiple neutrons.
+
 Lets talk this with the example to understand neural network
 Let say we wanted to build the approach to predict whether the image is koala or not. (Koala is the animal in australia)
 
@@ -197,7 +199,7 @@ During training, there are changes it might miss predict. During that time, the 
 That is Backward error propagation
 
 
-In neural network there is one set of input layers, there can be multiple set of hidden layers and there is only one output layer
+In neural network there is few elements or set of input layers, there can be multiple set of hidden layers and  there can be few elements or set of output layers.
 
 This is neural network
 
@@ -308,7 +310,10 @@ len(X_train)
 
 len(X_test)
 
-To see number of features in 2D array
+To see length and number of features in 2D array. 
+X_train.shape
+
+To see number only number of features in one of the array
 X_train[0].shape
 
 To viwe the data of one of data
@@ -316,6 +321,79 @@ X_train[0]
 
 To view the image. Use matplot matshow which show the image as per values in the dataset
 plt.matshow(X_train[0])
+
+To view the result value
+y_train[0]
+
+First we need to convert into single diamension array of train and test data set. It will be done by reshape in pandas. This called fallen the array
+X_train_flatten = X_train.reshape(len(X_train), 28*28)
+X_test_flatten = X_test.reshape(len(X_test), 28*28)
+Here we have given number of rows and columnds. Rows will take as per length. the columns we have given by passing other 2 array of 28 X 28 = 784
+This will create in lenght and 784 columns(features). We have to do the same for train and test data set of X
+
+Now we can view again after reshape via below
+X_train_flatten.shape
+X_train_flatten[0].shape
+
+
+Now we need to scale the values. Scalling is optional. But mostly scalling helps on increasing the accuracy. 
+We need to make the values from 0 to 1.
+We take divide each values with maximum value. That will have make each values from number 0 to 1
+Below is the simple way to scale. Here mazimum posible value is 255. So we are dividing by 255
+X_train_flatten_scalled = X_train_flatten / 255
+X_test_flatten_scalled = X_test_flatten / 255
+
+Now we can cross check the value 
+X_train_flatten_scalled[0]
+
+
+IMPORTANT: use below to create model, configure model, train model and evaluate model
+
+model = keras.Sequential([keras.layers.Dense(10, input_shape=((784,)), activation='sigmoid')])    # Creating the model
+model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])     # Configuring the model
+model.fit(X_train_flatten_scalled, y_train, epochs=5)               # Training the model
+model.evaluate(X_test_flatten_scalled, y_test)                      # Evaluate the model
+
+
+Below is the explanation:
+model = keras.Sequential([keras.layers.Dense(10, input_shape=((784,)), activation='sigmoid')])
+This is the place where we will create the model.  keras.layers.Dense(numberOfOutputElement, input_shape=((numberOfInputElement,)), activation='giveActivationFunctionHere')
+keras.layers.Dense is used because, we need to map each input elements to each output elements. Dense meaning mapping each input element with each output element
+First argument of keras.layers.Dense takes number of output element, next argument takes input share which has number of input element and then the activation 
+Above is just the input layer mapped with output layer.
+Here there is no hidden layer, we can pass multiple hidden layer as like keras.layers.Dense with different params. We can see that later
+
+model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
+This complie is used to configure model for training
+optimizer is the method of training. Helps to train effectively
+There are multiple different loss function. These are used to compare predicted and truth internally and again pass inside for backword propagation error or for resolving
+metrics should be accuracy here as we want to create the model with more accurate score.
+We can see all the params in details in upcoming tutorials
+
+model.fit(X_train_flatten_scalled, y_train, epochs=5)
+This is for training the model with training data set of X and y
+Here epochs is the numner of times the model needs to iterate the training samples. Each subset will be divide into training data set as per given epochs number of iteration and train
+When training it will give training score. Each epoc training score of training data set which we can see on output when runs
+
+
+model.evaluate(X_test_flatten_scalled, y_test)
+# This is to evaluate score with the test data set.
+# For training it uses training data set and shows score in fit. But in evalute this is with test data set and shows the real score which will be used for actual evaluation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ---------------------------------------------
