@@ -1,0 +1,155 @@
+Tutorial 7: Neural Network For Handwritten Digits Classification | Deep Learning Tutorial 7 (Tensorflow2.0)
+----------------------------------------------------------------------------------------------------------
+
+This has little bit of things which covered on tutorial 3 neutron with age factor to determine whether person will buy insurance or not including other featire
+Here there can be features like age, education, salary and saving factor.
+Here we can pass the age and education to hidden factor awareness
+And we can pass salary and saving factor to hidden factor affordable
+Now awareness and afforable can pass to output final layer to determine whether person will buy insurance or not
+In real time all features will be passed to all hidden layer
+Please refer the images
+
+Now lets take the handwritten digits
+This we can try to solve with simple neuron which has input layer and output layer.
+Later we can add hidden layer to increase the accuracy
+As the digit can be one of the digits. 
+There are only 10 numbres. So in output layer, we can give 10 neauron.
+When image is passed to the input layer and then 10 neurons in the output layer, the matching digit will give the highest score.
+Mostly for classification, we can give number of neuron in output layer as per number of different outputs.
+Here there is only 10 digit. So we have given 10
+
+We cannot directly give the image file into the input layer.
+It accepts only the data.
+So the image needs to converted into input data
+
+Here in each image, the background is black and number is drawn in white.
+So for black the value can be 0 and for complete white it can be 255.
+The image will be splitted into multiple 2D array of boxes or matrix 7 X 7 or might be anything X anything.
+Based on whites available on each box, there can be value.
+Now we have 2D array (7 X 7) of values.
+Now that 2D array of values needs to converted in 1D array with 49 features/columns (7 X 7)
+Now these 49 features will be used as the input layer.
+
+In the given digits data set, it has 28 X 28 of 2D values for each image data.
+So when converting into single diamension array, it will have 784 features/columns.
+We the input layer will have 784 features. And the output layer will have only 10 as the digits are only 10. We can use sigmoid
+When an data of one image is passed to this neural network, the predicted value will be shown on one of 10 output layer. That accuracy score will be higher
+Eg: when data of image 4 is passed, the 4th neuron of output layer will give highest score.
+
+
+We can use below which can help many a times
+
+import tensorflow as tf
+from tensorflow import keras
+import matplotlib.pyplot as plt
+import pandas as plt
+%matplotlib inline
+import numpy as np
+
+To load digits use below 
+
+(X_train, y_train), (X_test, y_test) = keras.datasets.mnist.load_data()
+This will give train and test data set like below
+
+We can check the length like below
+len(X_train)
+
+len(X_test)
+
+To see length and number of features in 2D array. 
+X_train.shape
+
+To see number only number of features in one of the array
+X_train[0].shape
+
+To viwe the data of one of data
+X_train[0]
+
+To view the image. Use matplot matshow which show the image as per values in the dataset
+plt.matshow(X_train[0])
+
+To view the result value
+y_train[0]
+
+First we need to convert into single diamension array of train and test data set. It will be done by reshape in pandas. This called fallen the array
+X_train_flatten = X_train.reshape(len(X_train), 28*28)
+X_test_flatten = X_test.reshape(len(X_test), 28*28)
+Here we have given number of rows and columnds. Rows will take as per length. the columns we have given by passing other 2 array of 28 X 28 = 784
+This will create in lenght and 784 columns(features). We have to do the same for train and test data set of X
+
+Now we can view again after reshape via below
+X_train_flatten.shape
+X_train_flatten[0].shape
+
+
+Now we need to scale the values. Scalling is optional. But mostly scalling helps on increasing the accuracy. 
+We need to make the values from 0 to 1.
+We take divide each values with maximum value. That will have make each values from number 0 to 1
+Below is the simple way to scale. Here mazimum posible value is 255. So we are dividing by 255
+X_train_flatten_scalled = X_train_flatten / 255
+X_test_flatten_scalled = X_test_flatten / 255
+
+Now we can cross check the value 
+X_train_flatten_scalled[0]
+
+
+IMPORTANT: use below to create model, configure model, train model and evaluate model
+
+model = keras.Sequential([keras.layers.Dense(10, input_shape=((784,)), activation='sigmoid')])    # Creating the model
+model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])     # Configuring the model
+model.fit(X_train_flatten_scalled, y_train, epochs=5)               # Training the model
+model.evaluate(X_test_flatten_scalled, y_test)                      # Evaluate the model
+
+
+Below is the explanation:
+model = keras.Sequential([keras.layers.Dense(10, input_shape=((784,)), activation='sigmoid')])
+This is the place where we will create the model.  keras.layers.Dense(numberOfOutputElement, input_shape=((numberOfInputElement,)), activation='giveActivationFunctionHere')
+keras.layers.Dense is used because, we need to map each input elements to each output elements. Dense meaning mapping each input element with each output element
+First argument of keras.layers.Dense takes number of output element, next argument takes input share which has number of input element and then the activation 
+Above is just the input layer mapped with output layer.
+Here there is no hidden layer, we can pass multiple hidden layer as like keras.layers.Dense with different params. We can see that later
+
+model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
+This complie is used to configure model for training
+optimizer is the method of training. Helps to train effectively
+There are multiple different loss function. These are used to compare predicted and truth internally and again pass inside for backword propagation error or for resolving
+metrics should be accuracy here as we want to create the model with more accurate score.
+We can see all the params in details in upcoming tutorials
+
+model.fit(X_train_flatten_scalled, y_train, epochs=5)
+This is for training the model with training data set of X and y
+Here epochs is the numner of times the model needs to iterate the training samples. Each subset will be divide into training data set as per given epochs number of iteration and train
+When training it will give training score. Each epoc training score of training data set which we can see on output when runs
+
+model.evaluate(X_test_flatten_scalled, y_test)
+# This is to evaluate score with the test data set.
+# For training it uses training data set and shows score in fit. But in evalute this is with test data set and shows the real score which will be used for actual evaluation
+
+
+
+We can add the hiddle layer like below when we create the model 
+model2 = keras.Sequential([
+    keras.layers.Dense(100, input_shape=((784,)), activation='relu'),
+    keras.layers.Dense(10, activation='sigmoid')
+]
+)
+Here we have added one hidden layer with 100 neurons to see how it performs. 
+Also we have given activation as relu. We will see what is relu in later tutorial. Here in this case, it improved the performance.
+Input needs to passed only on first layer
+
+
+We can avoid flattening manually by callig keras.layers.Flatten to make it one diamension array
+model3 = keras.Sequential([
+    keras.layers.Flatten(input_shape=(28,28)),
+    keras.layers.Dense(100, activation='relu'),
+    keras.layers.Dense(10, activation='sigmoid')
+]
+)
+## To flatten we can use  keras.layers.Flatten. This will take care of making to one diamenstion.
+## Scalling still we need to take care
+
+
+Please go through jupyter notebook for more details
+
+
+---------------------------------------------------------------------------
