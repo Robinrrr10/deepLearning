@@ -409,8 +409,8 @@ Please go through jupyter notebook for more details
 ---------------------------------------------------------------------------
 
 
-
-
+Tutorial 8: Activation Functions | Deep Learning Tutorial 8 (Tensorflow Tutorial, Keras & Python)
+--------------------------------------------------------------------------------------------------
 
 
 
