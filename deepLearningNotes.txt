@@ -411,6 +411,29 @@ Please go through jupyter notebook for more details
 
 Tutorial 8: Activation Functions | Deep Learning Tutorial 8 (Tensorflow Tutorial, Keras & Python)
 --------------------------------------------------------------------------------------------------
+Here we can see how the activation funcations in neural network
+Here we can see some of the activation functions
+
+In previous tutorials we have seen now the activation functionals helps to increase the accuracy.
+When we have the one of activation functiona like sigmoid function to predict whether the person buy the insurance of not with features like salary, education & age, activation function helps to give the value between 0 to 1. This helps to decide whether the person buy insurance or not based on values. If the value is below 0.5, person may not buy insurance. If value is more than 0.5, person will buy insurance.
+Signmoid helps to decide the classification problems.
+If there is no sigmoid functinal, value will be minus or plus infinity which is hard to predict the value.
+That is the reason we need activation functions
+
+Activation function mostly helps on output layer
+Activation function will be used in hidden layer as well
+
+
+If we remove activation layer from hidden and output layer, the output will be in the linear equation or the straight line.
+
+Previously we have see how the linear function helps to predict the classification with the age factor to decide whether the person will buy insurance.
+
+If we plot the scatter plot of the age and whether the preson buy the insurance or not then we can draw the line to see what splits whether the person buy insurance.
+If any of the point goes beyond the limit, then it may not work
+
+
+
+
 
 
 
