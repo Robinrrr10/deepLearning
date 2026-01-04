@@ -440,10 +440,67 @@ Sigmoid equation:
 signmoid(z) = 1 / 1 + e ^-z
 
 There is another funtion called tanh which gives the value from -1 to 1
-Tanh equation:
+tanh equation:
 tanh(z) = e^z - e^-z  /  e^z + e^-z
 
 Gentral guidline is to use sigmoid for output layer and try to use tanh for all hidden layer
+
+There is one issue in the sigmoid and tanh layer.
+Its in derivatives and loss.
+Derivatives gives how much the output changes based on each input.
+When value was higher number the derivatives become 0.
+This make the learning slower.
+This is called vanishing gradients
+Sigmoid and Tanh has this vanishing gradients problems. For that reason the learning process become slow
+
+For solving this, we have below functions called ReLu
+ReLu
+ReLu(z) = max(0, x) 
+Here, this this will give 0 if value is 0 or negative value.
+And this will give the same number itself if value is any positive value
+For hidden layer, if we are not sure which function to use, we can go with ReLu. That should be good
+And the learning will be faster here
+This is the most popular function. This is very light weight and computation will be faster.
+ReLu also has vanishing gradient problem when value goes less than 0.
+
+To solve this, we have one more activation function called Leaky ReLu.
+Leaky ReLu(z) = max(0.1x, x)
+
+
+Below 5 are the all list of activation functions
+1. Step function
+2. Sigmoid
+3. tanh
+4. ReLu
+5. Leaky ReLu
+
+Some time we need to try and see which function gives the best
+
+
+Below python code for each function. this is just for our understanding
+import math
+
+def sigmoid(x):
+  return 1 / (1 + math.exp(-x))
+
+def tanh(x):
+  return (math.exp(x) - math.exp(-x)) / (math.exp(x) + math.exp(-x))
+
+def relu(x):
+  return max(0, x)
+
+def leaky_relu(x):
+  return max(0.1x, x)
+
+These python code is just for our understanding. But we dont use this directly unless we use custom function.
+Mostly we use readymade api or functions which are already available in tensor/keras.
+
+------------------------------------------------
+
+
+  
+
+
 
 
 
