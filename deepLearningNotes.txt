@@ -482,18 +482,24 @@ import math
 
 def sigmoid(x):
   return 1 / (1 + math.exp(-x))
+# This gives value between 0 to 1
 
 def tanh(x):
   return (math.exp(x) - math.exp(-x)) / (math.exp(x) + math.exp(-x))
+# This gives value between -1 to 1
 
 def relu(x):
   return max(0, x)
+# This gives value 0 or the number it self
 
 def leaky_relu(x):
-  return max(0.1x, x)
+  return max(0.1 * x, x)
+# This gives value between of number*0.1 or the number it self
 
 These python code is just for our understanding. But we dont use this directly unless we use custom function.
 Mostly we use readymade api or functions which are already available in tensor/keras.
+
+Refer images and jupyter notebook for more details
 
 ------------------------------------------------
 
