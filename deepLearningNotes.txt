@@ -429,7 +429,22 @@ If we remove activation layer from hidden and output layer, the output will be i
 Previously we have see how the linear function helps to predict the classification with the age factor to decide whether the person will buy insurance.
 
 If we plot the scatter plot of the age and whether the preson buy the insurance or not then we can draw the line to see what splits whether the person buy insurance.
-If any of the point goes beyond the limit, then it may not work
+If any of the point goes beyond the limit, then it may not work.
+There are chance it might miss classify the results.
+That is step function. Step function is the one which gives the answer 0 or 1. Not with any decimals
+
+In step function there are changes it might give 1 for 2 output layer. So we cannot give the correct results.
+So it is always better to use sigmoid function which gives in decimals where we can give answers based on maximum values
+
+Sigmoid equation:
+signmoid(z) = 1 / 1 + e ^-z
+
+There is another funtion called tanh which gives the value from -1 to 1
+Tanh equation:
+tanh(z) = e^z - e^-z  /  e^z + e^-z
+
+Gentral guidline is to use sigmoid for output layer and try to use tanh for all hidden layer
+
 
 
 
