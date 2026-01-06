@@ -503,8 +503,8 @@ Refer images and jupyter notebook for more details
 
 ------------------------------------------------
 
-
-  
+Tutorial 9: Derivatives | Deep Learning Tutorial 9 (Tensorflow Tutorial, Keras & Python)
+----------------------------------------------------------------------------------------
 
 
 
