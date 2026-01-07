@@ -505,6 +505,42 @@ Refer images and jupyter notebook for more details
 
 Tutorial 9: Derivatives | Deep Learning Tutorial 9 (Tensorflow Tutorial, Keras & Python)
 ----------------------------------------------------------------------------------------
+Here we can see what is derivatives and partial derivatives.
+This is important because based on this the error and back propagation works in neural network
+Here we can see slope and derivatives.
+
+Please refer image and check below
+Slope is the difference of y and x in straight line
+Slope = Δy/Δx   = difference in y / difference in x
+if y changes() to 3 and x changes to 1 between each point
+Then slope  = 3 / 1
+Slope y = 3
+
+Please refer image and check below
+When line is non linear / not straight, it looks like little curve, how to find the slope.
+Here the slope is not constant. Based on what point we are looking into, the slope might vary
+To find this slope, we need to zoom in and it might look a little straight line.
+Here we need to take very small two points
+If f(x) = x2 and we can calculate f(x + Δx) 
+Find derivatives
+We know that f(x + Δx) = (x + Δx)^2
+We know that (x + Δx)^2: f(x + Δx) = x^2 + 2xΔx + (Δx)^2
+
+Slope formula is = f(x + Δx)-f(x) / Δx
+=  x^2+2xΔx+(Δx)^2-x^2 / Δx
+= 2xΔx+(Δx)^2 / Δx                            //cancelled x^2 and -x^2
+=  2x+Δx                 //divided each by Δx
+Δx   = 2x
+Derivatives od x^2 is 2X
+Derviatives answer will be functions. Here answer is 2x
+Derivatives will be in non linear or little curve lines
+
+
+Time is 3:08
+
+
+
+
 
 
 
