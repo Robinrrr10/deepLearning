@@ -1,0 +1,113 @@
+Tutorial 9: Derivatives | Deep Learning Tutorial 9 (Tensorflow Tutorial, Keras & Python)
+----------------------------------------------------------------------------------------
+Here we can see what is derivatives and partial derivatives.
+This is important because based on this the error and back propagation works in neural network
+Here we can see slope and derivatives.
+
+Please refer image and check below
+Slope is the difference of y and x in straight line
+Slope = Δy/Δx   = difference in y / difference in x
+if y changes() to 3 and x changes to 1 between each point
+Then slope  = 3 / 1
+Slope y = 3
+
+Please refer image and check below
+When line is non linear / not straight, it looks like little curve, how to find the slope.
+Here the slope is not constant. Based on what point we are looking into, the slope might vary
+To find this slope, we need to zoom in and it might look a little straight line.
+Here we need to take very small two points
+If f(x) = x2 and we can calculate f(x + Δx) 
+Find derivatives
+We know that f(x + Δx) = (x + Δx)^2
+We know that (x + Δx)^2: f(x + Δx) = x^2 + 2xΔx + (Δx)^2
+
+Slope formula is = f(x + Δx)-f(x) / Δx
+=  x^2+2xΔx+(Δx)^2-x^2 / Δx
+= 2xΔx+(Δx)^2 / Δx                            //cancelled x^2 and -x^2
+=  2x+Δx                 //divided each by Δx
+Δx   = 2x
+Derivatives od x^2 is 2X    //2 will go at start and power - 1 where x^2 = 2x1x^2-1 = 2X
+Derviatives answer will be functions. Here answer is 2x
+Derivatives will be in non linear or little curve lines
+
+Below are the derivatives of few 
+
+d / dx x^3 = 3x^2
+d / dx 7x^3 = 21x^2
+d / dx 2x^3 + x^5= 6x^2 + 5x^4
+
+Derivatives will be always a function
+
+
+Slope vs Derivatives
+Slope is used for linear equation
+Derivatives is used for non linear equation
+
+Slope is a constant
+Derivatives is the function
+
+
+Now we can see partial derivatives.
+
+f(x,y) = x^3 + y^2
+df / dx = x^3 + 0 = 3x^2          //We are making the y as 0 here
+df / dy = 0 + y^2 = 2y            //We are making the x as 0 here
+
+
+Below are few important links:
+https://www.mathsisfun.com/calculus/derivatives-introduction.html
+https://www.mathsisfun.com/calculus/derivatives-rules.html
+https://www.mathsisfun.com/calculus/derivatives-partial.html
+We can go through these to understand more
+
+How the derivatives useful in neural network.
+This gives huch the result changes based on input changes
+
+For example,
+Lets say we have number of betrooms and squarefeet to predict price.
+
+f(bedrooms, sqfts) = betrooms^3 + sqfts^2
+d(price) / d(betrooms) = 3betrooms^2  //This will give how much the price changes based on betrooms
+d(proce) / d(sqfts) = 2sqfts       //This gives how much the price changes based on sqfts
+
+
+Lets take one example where it has age and afforability which gives whether person buy insurance or not
+Based on this training during each time, it will adjust its weight or formula.
+Based on change in age, it will change the score/predict whether the person will buy insurance or not
+Based on change in afforability, it will change the score/predict whether the person will buy insurance or not
+Based on both age and afforability changes, it will predict how much whether the person will buy insurance or not. This is partial derivatives
+
+
+Adding result of exercise here as this is maths related. not the code:
+
+Below are Functions. Find derivatives
+
+2x^4 - 7y^20 + z + 5
+=8x^3 - 140y^19 + z^0  //Removed 5 as there is no x or y or z
+=8x^3 - 140y^19 + 1
+
+x^-3 + 2y^1
+= -3x^-4 + 2y^0
+= -3x^-4 + 2   //y =1, so 2 x 1 = 2
+
+cos(x)sin(x)
+Correct answer is cos^2(x)-sin^2(x)
+
+(x + 5)(x - 2)
+=x^2 - 2x + 5x - 10
+=x^2 + 3x - 10
+=2x + 3x^0 - 10  
+=2x + 3   //Remove 10 as there is no x and x^0 is 1. So 3 x 1 is 3
+
+
+7
+=0   //Removed 7 as it don't have x or function into it
+
+9x
+=9x^0
+=9     //x^0 is 1. 1 x 9 is 9
+
+
+For more details check images
+
+------------------
