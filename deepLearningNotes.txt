@@ -559,6 +559,21 @@ df / dx = x^3 + 0 = 3x^2          //We are making the y as 0 here
 df / dy = 0 + y^2 = 2y            //We are making the x as 0 here
 
 
+Below are few important links:
+https://www.mathsisfun.com/calculus/derivatives-introduction.html
+https://www.mathsisfun.com/calculus/derivatives-rules.html
+https://www.mathsisfun.com/calculus/derivatives-partial.html
+We can go through these to understand more
+
+How the derivatives useful in neural network.
+This gives huch the result changes based on input changes
+
+For example,
+Lets say we have number of betrooms and squarefeet to predict price.
+
+f(bedrooms, sqfts) = betrooms^3 + sqfts^2
+d(price) / d(betrooms) = 3betrooms^2  //This will give how much the price changes based on betrooms
+d(proce) / d(sqfts) = 2sqfts       //This gives how much the price changes based on sqfts
 
 
 
