@@ -531,12 +531,35 @@ Slope formula is = f(x + Δx)-f(x) / Δx
 = 2xΔx+(Δx)^2 / Δx                            //cancelled x^2 and -x^2
 =  2x+Δx                 //divided each by Δx
 Δx   = 2x
-Derivatives od x^2 is 2X
+Derivatives od x^2 is 2X    //2 will go at start and power - 1 where x^2 = 2x1x^2-1 = 2X
 Derviatives answer will be functions. Here answer is 2x
 Derivatives will be in non linear or little curve lines
 
+Below are the derivatives of few 
 
-Time is 3:08
+d / dx x^3 = 3x^2
+d / dx 7x^3 = 21x^2
+d / dx 2x^3 + x^5= 6x^2 + 5x^4
+
+Derivatives will be always a function
+
+
+Slope vs Derivatives
+Slope is used for linear equation
+Derivatives is used for non linear equation
+
+Slope is a constant
+Derivatives is the function
+
+
+Now we can see partial derivatives.
+
+f(x,y) = x^3 + y^2
+df / dx = x^3 + 0 = 3x^2          //We are making the y as 0 here
+df / dy = 0 + y^2 = 2y            //We are making the x as 0 here
+
+
+
 
 
 
