@@ -701,8 +701,10 @@ Dot product is used in matrix multiplication.
 Meaning it is used for mutliplying vectors. //When we have same number of rows and same number of columns.
 Mutiplying this is called Dot products.
 
+Refer jupyter notebook for more details
 
-Lets see some python code
+
+--------------------------------------------------
 
 
 
