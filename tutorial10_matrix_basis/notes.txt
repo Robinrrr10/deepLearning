@@ -1,0 +1,88 @@
+Tutorial 10 : Matrix Basics | Deep Learning Tutorial 10 (Tensorflow Tutorial, Keras & Python)
+----------------------------------------------------------------------------------------------
+In this tutorial we can see some basic matrix.
+How it works.
+What is dot product etc
+This is helpful to understand layer how the neural network training works in later other tutorials
+
+Lets take we have some report of revenue and expenses of each products in each year in apple company
+Let say it was in matrix.
+To calculate the profit/loss we need to subtract revenue with expenses for each values
+
+Each value directly minus for each and gives the results
+
+revenue(millions)
+       2022 2023 2024
+iphone 100  120  115
+ipad   80   76   70
+mac    40   45   67
+
+expenses(millions)
+       2022 2023 2024
+iphone 80  90  91
+ipad   60   55   53
+mac    30   40   47
+
+Profit/loss(millions)   // Formula is revenue - expenses 
+       2022 2023 2024
+iphone 20  30  24
+ipad   20   21   17
+mac    10   5   20
+
+//Each value in matrix is substracted by each 
+Above is matrix subtraction.
+See images for more details.
+
+
+
+
+Lets take 2 table
+One has number of units of products sold in each years
+And we have price of each products
+Calculate total price of units in each years
+Here we need to multiple price with each product for a year
+And we need to add the values of products in each year to get the total values of the years
+
+        sold (units)
+       2022  2023  2024
+iphone 110   200   240
+ipad   40    30    34
+mac    30    35    40
+
+     Price of each unit
+      iphone   ipad   mac
+Price 1000      400   2500
+
+
+Each with be be multiplied by each [1000      400   2500] X  [[ 110   200   240],[ 40    30    34],[ 30    35    40]] = [171000   299500   353600]
+
+Eg:
+       2022       2023       2024
+iphone 1000x110   1000x200   1000x240
+ipad   400x40     400x30     400x34
+mac    2500x30    2500x35    2500x40
+
+=
+       2022       2023       2024
+iphone 110000   200000   240000
+ipad   16000    12000    13600
+mac    45000    87500    100000
+
+=
+
+      Total sale 
+     2022     2023     2024 
+Price 171000   299500   353600
+
+Here it multiply 1 row with 1st columns  //3 value in first rows with 3 values in first column
+Similarly for other rows and columns.
+This is called Dot product
+Dot product is multiplying each values in the rows of first matrix with each values in the first column of second matrix
+Dot product is used in matrix multiplication. 
+Meaning it is used for mutliplying vectors. //When we have same number of rows and same number of columns.
+Mutiplying this is called Dot products.
+
+Refer jupyter notebook for more details
+
+
+--------------------------------------------------
