@@ -686,7 +686,12 @@ mac    2500x30    2500x35    2500x40
 iphone 110000   200000   240000
 ipad   16000    12000    13600
 mac    45000    87500    100000
-Total  171000   299500   353600
+
+=
+
+      Total sale 
+     2022     2023     2024 
+Price 171000   299500   353600
 
 Here it multiply 1 row with 1st columns  //3 value in first rows with 3 values in first column
 Similarly for other rows and columns.
@@ -697,6 +702,7 @@ Meaning it is used for mutliplying vectors. //When we have same number of rows a
 Mutiplying this is called Dot products.
 
 
+Lets see some python code
 
 
 
