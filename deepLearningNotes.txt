@@ -707,6 +707,52 @@ Refer jupyter notebook for more details
 --------------------------------------------------
 
 
+Tutorial 11: Loss or Cost Function | Deep Learning Tutorial 11 (Tensorflow Tutorial, Keras & Python)
+----------------------------------------------------------------------------------------------------
+In this tutorial we can see how loss and cost function works.
+And we can see some of the loss and cost functions
+These are used in neural network.
+
+In one of the past tutorials in deep learning when implementing neural network, we have used loss in compile method.
+There are different types of loss functions
+1. spare_categorical_crossentropy
+2. binary_crossentropy
+3. categorical_crossentropy
+4. mean_absolute_error
+5. mean_squre_error
+
+Here we can see mean absolute and mean square error
+Lets take an example where we have play cards.
+Where friend has actual card, and we are guessing.
+When we guess few cards, friend will say the difference/distance between that actuals and guess values. 
+The difference of each actual and guess is taken. And it will be sum and in dinominator we will give number of guess. That is mean error
+
+Here is a details of mean absoute error
+Actual card =  K    9    7
+Random guess = 8    Q    6
+Absolute error = 5   3   1          //These are difference of each actual and guess
+Mean absoute error = 5+3+1 / 3 
+= 9/3 = 3
+
+
+Here is a details of mean square error
+Actual card =  K    9    7
+Random guess = 8    Q    6
+Square error = 5^2   3^2   1^2          //These are difference square of each actual and guess
+            = 25     9    1 
+Mean square error = 25+9+1 / 3 
+= 35/3
+
+
+time: 3:13
+
+
+
+
+
+
+
+
 
 
 
