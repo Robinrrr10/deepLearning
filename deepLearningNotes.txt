@@ -801,7 +801,17 @@ model.compile(optimizer='adam', loss='binary_crossentropy', matrix=['accuracy'])
 
 For formulas refer screenshots
 
-Time 10:30
+
+In above compile functions we have used different loss for logistic regression just to understand
+But in reality for logistic regression we use only binary_crossentropy. We donot use mean absolute error or mean squared error
+Below is the reason for that
+https://medium.com/data-science/why-not-mse-as-a-loss-function-for-logistic-regression-589816b5e03c
+https://towardsdatascience.com/why-not-mse-as-a-loss-function-for-logistic-regression-589816b5e03c
+
+
+
+Time: 12:05
+
 
 
 
