@@ -743,21 +743,65 @@ Square error = 5^2   3^2   1^2          //These are difference square of each ac
 Mean square error = 25+9+1 / 3 
 = 35/3
 
+What does Loss has to do with neural network ?
+Loss is used in neural network training
 
-time: 3:13
+Lets say we have insurance data set with 3 variables
+2 independent variables age and afforability
+1 independent target variables person has insurance or not
+Its for building the function/model to predict whether person will buy insurance or not
+
+lets talk about training this in neural network.
+This has logicstic regression as input layer and sigmoid as output layer
+We are feeding each value 1 by 1 into network into the formula
+y = w1*x1 + w2*x2 + bias   //Where x1 is age and x2 is affordability
+and it has sigmoid formula z = 1 / 1 + e^-y in output layer
+Lets say we are giving sample 1 in the network. this gives output y^ as 0.99
+But the actual value y is 0
+this is error
+so for error1 = abs(y - y^) = 0.99
+then we are giving sample 2 in network
+Here also it is same and the error1 = 0.99
+similarly we are giving all samples, in 13th sample
+the output y^ is 0.99 and the actual y is 1. So the error13 is 0.01
+
+Now total errors = error1 + error2.....+ error13  //Each error are the loss
+E^ni=1 abs(yi - yi^)
+Mean absolute error (MAE) = 1/n E^n i=1 abs(yi - yi^)   //Mean Absolute Error is the cost function
+Here MAE is = 10.02
+Check the formula in screenshot
+
+
+We can talk about epoch. How many times it went to all samples. That is epoc. We will give this during training.
+It will go the training that many times
+
+model = keras.Sequential([
+keras.layers.Dense(10, input_shape=(784,) activation='sigmoid')
+])
+
+model.compile(optimizer='adam', loss='space_categorical_crossentorpy', matrix=['accuracy'])      //Here we are giving the loss functions
+
+model.fit(X_train_flattened, y_train, epochs=5)     //Here we are giving epochs. It will go through the entire training samples as many given times. In this case, it will go 5 times in entire samples
 
 
 
+Below are the fomula and complie functions for some of the loss types //For formulas refer screenshots
+
+Mean absolute error (MAE) = 1/n E^n i=1 abs(yi - yi^)
+model.compile(optimizer='adam', loss='mean_absolute_error', matrix=['accuracy'])
 
 
+Mean square error (MAE) = 1/n E^n i=1 (yi - yi^)^2
+model.compile(optimizer='adam', loss='mean_squared_error', matrix=['accuracy'])
 
 
+Log loss or Binary cross entropy = 1/n E^n i=0 yi(log yi^) + (1 - yi) .log(1 - yi^)   
+model.compile(optimizer='adam', loss='binary_crossentropy', matrix=['accuracy'])
+//Binary cross entropy is the synoniams of log loss
 
+For formulas refer screenshots
 
-
-
-
-
+Time 10:30
 
 
 
