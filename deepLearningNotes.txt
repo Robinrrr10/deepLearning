@@ -795,7 +795,7 @@ Mean square error (MAE) = 1/n E^n i=1 (yi - yi^)^2
 model.compile(optimizer='adam', loss='mean_squared_error', matrix=['accuracy'])
 
 
-Log loss or Binary cross entropy = 1/n E^n i=0 yi(log yi^) + (1 - yi) .log(1 - yi^)   
+Log loss or Binary cross entropy = -1/n E^n i=0 yi(log yi^) + (1 - yi) .log(1 - yi^)   
 model.compile(optimizer='adam', loss='binary_crossentropy', matrix=['accuracy'])
 //Binary cross entropy is the synoniams of log loss
 
@@ -803,14 +803,16 @@ For formulas refer screenshots
 
 
 In above compile functions we have used different loss for logistic regression just to understand
-But in reality for logistic regression we use only binary_crossentropy. We donot use mean absolute error or mean squared error
+But in reality for logistic regression we use only binary_crossentropy (log loss). We donot use mean absolute error or mean squared error
 Below is the reason for that
 https://medium.com/data-science/why-not-mse-as-a-loss-function-for-logistic-regression-589816b5e03c
 https://towardsdatascience.com/why-not-mse-as-a-loss-function-for-logistic-regression-589816b5e03c
 
 
+We can implement some of the python code to understand how the few loss function works with actual and predicted values. 
+This is just of our understanding. 
 
-Time: 12:05
+--------------------
 
 
 
