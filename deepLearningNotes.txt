@@ -820,8 +820,22 @@ In this tutorial we can see how we can implement gradient descent in deep learni
 We can see how we can implement using tensorflow.
 And we can also see how we can implement using plane python code.
 Gradient descent is heart of the meachine/deep leanring using in many places in neural network.
+This is most important and used particularly on supervised machine learning
 This will be mostly asked in interviews as well.
 So it is better to understand how the gradient descent works etc
+
+Lets say if we have few data set which has X and Y with simple dataset with number, we might able to predict the formula
+In simple cases we can can able to predict the formula
+If the data has some decimals or complex connectivity between values, we may not be able to predict the formula.
+But computer can able to predict the formula
+
+Lets take the dataset which has age and affordability as input data set X
+And the person buy insurance or not as the output data set y
+This is binnary classification which has the simple function.
+For this we will be having the simple neural network which has logistic regression as the input layer and sigmoid as the output layer
+
+
+
 
 
 
