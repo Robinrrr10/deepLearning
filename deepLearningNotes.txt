@@ -834,6 +834,61 @@ And the person buy insurance or not as the output data set y
 This is binnary classification which has the simple function.
 For this we will be having the simple neural network which has logistic regression as the input layer and sigmoid as the output layer
 
+Here input will be passed and then we will get the output. This is forward path
+
+First the input will be passed to the neural network, and this will give the predicted value and we will have the actual value.
+And then the error will be calculated with the formula.
+This will be repeated for each of the sample data. until last data set.
+After last data set, the total error will be summed and divided by number of errors to calculate the error average
+Here we are using log error or cross entropy to calculate the error. For gradient descent this is best fit error rate
+The value of total error will be given as log loss once it gone through all sample
+Going through data set 1 time completely is the 1 epoch.
+Our goal is to reduce the log loss.
+So the value will be back propagated to train again with multiple epoch (multiple cycle of whole run) until the log loss was reducing.
+This is gradient descent.
+To get best result, it will be run with many epoch.
+
+Here it is trying to find the derivatives where for the given change input what is the change in output.
+Below is the formula
+
+w1 = w1 - somthing
+w1 = w1 - learning rate * a/aw1
+w2 = w2 - learning rate * a/aw2
+b = b - learning rate * a/ab
+
+//Learning rate is the how much it changes for each input
+
+a/aw1 = 1/n nEi=1 xi(yi^ - yi)
+a/b = 1/n nEi=1 (yi^ - yi)
+
+We will get w1, w2 and b using this formula at the end of first epoch
+Then this value will be used in the formula in the forward path and then it will get the error for each and get w1, w2 and b at the end of second epoch
+Similar way it will be for next and other epoch
+This is batch gradient. There are other types of gradient technique as well
+epoch is one of parameter which will be used in model.fit training method
+
+At what point we need to stop the epoch or how many epoch we need to give
+At one point of time the error will be very less and there wont be any change in loss.
+The derivatives remail same. During that time we need to stop or we need to give that many number of epoch
+This minimum value of derivatives is called global miima
+This is the way gradient descent works.
+
+For more details about formula and understanding please check the images.
+
+Please check the excercise as well
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
