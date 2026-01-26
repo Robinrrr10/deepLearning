@@ -816,6 +816,12 @@ This is just of our understanding.
 
 Tutorial 12: Gradient Descent For Neural Network | Deep Learning Tutorial 12 (Tensorflow2.0, Keras & Python)
 -----------------------------------------------------------------------------------------------------------
+In this tutorial we can see how we can implement gradient descent in deep learning.
+We can see how we can implement using tensorflow.
+And we can also see how we can implement using plane python code.
+Gradient descent is heart of the meachine/deep leanring using in many places in neural network.
+This will be mostly asked in interviews as well.
+So it is better to understand how the gradient descent works etc
 
 
 
