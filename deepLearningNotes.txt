@@ -877,6 +877,26 @@ For more details about formula and understanding please check the images.
 
 Please check the excercise as well
 
+Below is the way to implement via tensor flow. Please check jupyter notbook for more details
+
+
+model = keras.Sequential([
+    keras.layers.Dense(1, input_shape=((2,)), activation='sigmoid', kernel_initializer='ones', bias_initializer='zeros')
+])
+
+model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])      # Here we have given loss as binary_crossentropy
+
+model.fit(X_train_scalled, y_train, epochs=5000)          # Here we have given epochs as 5000. initially we have given 1000. Then with trial and error 5000 gives more accuracy with less loss.    # this is to train and the model will be ready here
+
+model.evaluate(X_test_scalled, y_test)              # This is the way we can evoluate the score via test samples
+
+model.predict(X_test_scalled)                        # This will pridict and print values
+
+coef, intercept = model.get_weights()                # This will give the coefficient and the intercept
+
+//Fore more details please refer the jupyter notebook
+
+Time: 25 mins
 
 
 
