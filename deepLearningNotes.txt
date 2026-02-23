@@ -949,7 +949,7 @@ gradient_descent(X_train_scalled['age'], X_train_scalled['affordibility'], y_tra
 
 Tutorial 13 : Implement Neural Network In Python | Deep Learning Tutorial 13 (Tensorflow2.0, Keras & Python)
 ------------------------------------------------------------------------------------------------------------
-
+Here we can see how we can implement the gradient decent function with plane python code
 
 
 
