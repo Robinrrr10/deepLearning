@@ -1007,6 +1007,37 @@ Please check the jupyter notebook for more details
 
 --------------------------------------------------------
 
+Tutorial 14 : Stochastic Gradient Descent vs Batch Gradient Descent vs Mini Batch Gradient Descent |DL Tutorial 14
+------------------------------------------------------------------------------------------------------------------
+Here we can see what is batch gradient descent, stochastic gradient descent and mini batch gradient descent
+Here we can also see how we can implement those in plain python code
+
+Batch Gradient Descent
+----------------------
+Here the this will go through all samples (one complete epoch) and then will calculate the weight and bias.
+Then it will go through the next complete round and then adjust the weight.
+Going through complete samples and then adjusting weight on each epoch is called batch gradient descent
+
+Stochastic Gradient Descent
+--------------------------
+Here this will pick one random samples and then it will calculate weight and bias
+Then the next sample and then adjust the weight.
+Going through samples randomly one by one and adjusting weight and bias for each samples is called Stochastic gradient descent.
+
+Mini Batch Gradient Descent
+---------------------------
+In this case this will pick few set of samples and then it will calculate the weight and bias.
+Then it pick the next set of samples and adjust the weight and bias
+This is mini batch gradient descent
+
+
+
+
+
+
+
+
+
 
 
 
