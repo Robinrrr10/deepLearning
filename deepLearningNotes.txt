@@ -1031,6 +1031,39 @@ Then it pick the next set of samples and adjust the weight and bias
 This is mini batch gradient descent
 
 
+Lets say we have house price prediction which has area and bedroom as feature and price is the target
+Here each samples and passed to the models one by one and one in the formula 
+price = 1 * area + 1 * bedrooms * bias
+Based on the formula this will get the predicted value.
+We will have the actual value on the training target values.
+Then this will calculate the square error of each samples
+error1 = (price - ^price)^2
+At the end of all samples, it will be called the end of epoc.
+Then it will calculate the total cost
+total error = error1 + error2 + error3 + ..... + error6
+Mean square error = total_error / 6
+
+Then calculate w1, w2 and bias using formula
+w1 = w1 - learning rate * a(mse) / aw1
+w1 = 1 - (-50) = 51
+
+w2 = w2 - learning rate * a(mse) / aw2
+w2 = 1 - (-8) = -9
+
+b = b - learning rate * a(mse) / bw2
+b = 1 - (-20000) = 20001
+
+After calculating these, this again goe through the samples with updated w1, w3 and bias
+I will keep on running the epoc multiple times until error reate become too less and nearly same
+This is batch gradient descent
+
+Lets say we have 10 milion records,
+This will take time.
+Lets say this has 200 features/columnns. This required lot of comparision as this have to go through all samples etc
+In this case, we can pick one sample records then appliend on the same formula and this will find the c and w1
+Adjusting the weight on each samples.
+Adjusting the weight and samples on each samples is called Stochastic Gradient Descent
+
 
 
 
