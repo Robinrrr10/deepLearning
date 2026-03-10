@@ -1091,8 +1091,9 @@ Use one (randomly picked sample) sample in forward pass and then it adjust the w
 Mini batch gradient descent:
 Use batch of samples (randomly picked samples) in forward pass and then it adjust the weights
 
+Please refer the jupyter notebooks of the tutorial and exercise.  There we have implemented these in plain python code
 
-
+----------------------
 
 
 
