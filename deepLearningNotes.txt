@@ -1026,7 +1026,7 @@ Going through samples randomly one by one and adjusting weight and bias for each
 
 Mini Batch Gradient Descent
 ---------------------------
-In this case this will pick few set of samples and then it will calculate the weight and bias.
+In this case this will pick few set of random samples and then it will calculate the weight and bias.
 Then it pick the next set of samples and adjust the weight and bias
 This is mini batch gradient descent
 
@@ -1065,6 +1065,31 @@ Adjusting the weight on each samples.
 Adjusting the weight and samples on each samples is called Stochastic Gradient Descent
 
 
+What is the key different between batch gradient descent and stochastic gradient descent.
+Batch gradient descent:
+1. This uses all training samples in forward pass and then it adjust the weights
+2. This is good for all small training set
+3. Here we can see the weight adjusted gradually and smothly comes down in graph
+
+Stochastic gradient descent:
+1. This randomly pick each samples in forward pass and then it adjust the weights
+2. This is good when it has big training set and if we have less computation power
+3. Here we can see the weight adjusted wont be gradually. Littly zigzag (not smoth) and then slowly comes down in graph
+
+How about mini batch gradient descent:
+This is like stochastic gradient descent. But instead of picking each samples, this take a batch or set of few random samples and then it will adjust the weights.
+For example, if we have 20 training samples. I pick 5 random samples first and adjust the weights. Then again pick next 5 randome samples and adjust the weights etc.
+This is mini batch batch gradient descent
+
+
+Batch gradient descent:
+Use all training samples in forward pass and then it adjust the weights
+
+Stochastic gradient descent:
+Use one (randomly picked sample) sample in forward pass and then it adjust the weights
+
+Mini batch gradient descent:
+Use batch of samples (randomly picked samples) in forward pass and then it adjust the weights
 
 
 
