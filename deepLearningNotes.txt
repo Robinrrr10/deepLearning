@@ -1097,6 +1097,51 @@ Please refer the jupyter notebooks of the tutorial and exercise.  There we have 
 
 Tutorial 15: Chain Rule | Deep Learning Tutorial 15 (Tensorflow2.0, Keras & Python)
 -----------------------------------------------------------------------------------
+Chain rule is part of differential calculus
+Lets say we have home price prediction with samples which has squrefeet and bedrooms
+price = w1 * x1 + w2 * x2 + bias
+each square feet w1 and number of bedrooms w2 is passed into the formula to get the price
+y = nEi=0 wixi + b
+each data will be passed and we will get the y predicted value
+Now we will compare with y truth value and we will calculate the error
+error1 = y - y1 
+squared error1
+Now we will get total error
+And calculate the mean
+total errors = err1 + err2 + .... + err6
+mean squre error = err1 + err2 + .... + err6 / 6
+loss = mean squared error
+
+y - y = e2 to calculate the loss
+
+w1 = w1 - something
+w1 = w1 - learning rate * a/aw1
+w2 = w2 - learning rate * a/aw2
+b = b - learning rate * a/b
+
+We will take w1, w2 and b as 1 then we will adjust the weight
+And we will pass to the next iteration
+Until we get the optimal value or global minima we will do the same again and again for each iteration
+
+aL/ae = 2e
+ae/ey = -1
+ay/aw1 = area
+
+aL/aw1 = ?
+aL/aw1 = aL/ae * ae/ay^ * ay^/w1
+aL/aw1 = -2e * area
+
+This is chain rule
+
+7:44
+
+
+
+
+
+
+
+
 
 
 -----------------------------
