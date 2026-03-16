@@ -1095,6 +1095,12 @@ Please refer the jupyter notebooks of the tutorial and exercise.  There we have 
 
 ----------------------
 
+Tutorial 15: Chain Rule | Deep Learning Tutorial 15 (Tensorflow2.0, Keras & Python)
+-----------------------------------------------------------------------------------
+
+
+-----------------------------
+
 
 
 
