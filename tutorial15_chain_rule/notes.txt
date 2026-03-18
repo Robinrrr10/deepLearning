@@ -64,6 +64,8 @@ ax/ab = 7
 az/ab  = az/ax * ax/ab
  = 4 * 7
  = 28
+
 This is how the bigger forumla is derived from the smaller formula in neural network
 
+Please check the images of this tutorial15 for more details about chain rule
 --------------
