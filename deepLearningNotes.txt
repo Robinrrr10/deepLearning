@@ -1133,7 +1133,39 @@ aL/aw1 = -2e * area
 
 This is chain rule
 
-7:44
+
+Lets say we have age, education, income and saving for insurance data set which decides whether the person will buy insurance or not. 
+Lets say this has multi layer neural network.
+Which has middle layer where age and education decides awareness. (income and saving may not play major role to decide awareness)
+Where another middle layer where income and saving decides affordability. (age and education may not play major role to decide affordability)
+Then awareness and affordability decides the output layer whether the person will buy insurance or not
+
+We can simplify in neural network graph. We can call this as computation graph
+We will be finding how much it changes based on given changes in input
+This helps to comes up with optimal value
+Given the change in x how much the y changes
+
+
+From each smaller equation, this will find the bigger equation
+lets say a and b are input layer or x and c and d are input layer of y
+x and y are the middley layer. And the output layer is z
+Lets sat x=a^2 + 7b and y=c^3 + d
+then z = 4x + 3y
+az/ax = 4
+ax/aa = 2a
+now az/aa = az/ax * ax/aa
+ = 4 * 2a
+ = 8a
+ax/ab = 7
+az/ab  = az/ax * ax/ab
+ = 4 * 7
+ = 28
+This is how the bigger forumla is derived from the smaller formula in neural network
+
+--------------
+
+
+
 
 
 
