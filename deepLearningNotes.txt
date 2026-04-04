@@ -1167,8 +1167,8 @@ Please check the images of this tutorial15 for more details about chain rule
 
 --------------
 
-
-
+Tutorial 16 : Tensorboard Introduction | Deep Learning Tutorial 16 (Tensorflow2.0, Keras & Python)
+--------------------------------------------------------------------------------------------------
 
 
 
