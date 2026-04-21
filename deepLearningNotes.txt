@@ -1169,7 +1169,27 @@ Please check the images of this tutorial15 for more details about chain rule
 
 Tutorial 16 : Tensorboard Introduction | Deep Learning Tutorial 16 (Tensorflow2.0, Keras & Python)
 --------------------------------------------------------------------------------------------------
+Tensor board is the dashboard where we can visually see the graph/metrics of loss, accuracy in each epoch
+We don't need separate installation for tensor board. This comes along with tensorflow
+This helps on debugging and visually see how the loss and accuracy changes on each epoch
+We can also see the graph and distribution metrics
 
+To enable this we need to pass callback parameter in fit function
+
+Eg:
+tb_callback = tf.keras.callbacks.TensorBoard(log_dir='logs/', histogram_freq=1)
+model.compile(optimizer='SGD', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
+model.fit(X_train, y_train, epochs=5, callbacks=[tb_callback])
+
+
+To open the tensor board, go to the directory where the log directory is and use below command in cmd or terminal
+Eg:
+tensorboard --logdir logs/
+
+To open tensor board in jupyternotebook use below
+Eg:
+%load_ext tensorboard
+%tensorboard --logdir logs/
 
 
 
