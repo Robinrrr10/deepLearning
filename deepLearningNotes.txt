@@ -1191,6 +1191,8 @@ Eg:
 %load_ext tensorboard
 %tensorboard --logdir logs/
 
+We can save each model's tensorboard logs in different directory and we can compare and see the performance
+
 
 
 
