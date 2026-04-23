@@ -1194,6 +1194,13 @@ Eg:
 We can save each model's tensorboard logs in different directory and we can compare and see the performance
 
 
+In tensor board, in scalar tab we can see the accuracy, loss and learning rate changes as per input
+In Graph we can see how eah network flows in the network etc
+In distribution and histogram we can see the bias and kernal(weights)
+
+For more details, please refer the playbook
+
+-------------------------
 
 
 
