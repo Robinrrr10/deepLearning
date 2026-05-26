@@ -1204,6 +1204,7 @@ For more details, please refer the playbook
 
 Tutorial 17: GPU bench-marking with image classification | Deep Learning Tutorial 17 (Tensorflow2.0, Python)
 ------------------------------------------------------------------------------------------------------------
+Here we can see how we can measure the performance of model and different attributes of model in CPU and GPU
 
 
 
